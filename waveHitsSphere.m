@@ -80,10 +80,10 @@ for n = 1:dur*fs
     axis([-x_dist, x_dist, -y_dist, y_dist, -x_dist*2, x_dist*4]);
     caxis([-8 20]);
     view(-12,84);
-    title(sprintf('Cylindrical Scattering of Plane Wave at %f seconds', t(n)));
+    title(sprintf('Spherical Scattering of Plane Wave at %f seconds', t(n)));
     hold off
-    %M(n) = getframe(gcf);
+    M(n) = getframe(gcf);
     pause(1);
 end
 disp('bouncing to avi...');
-movie2avi(M,'waveHitsCylinder.avi');
+movie2avi(M,'waveHitsSphere.avi');
