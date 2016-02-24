@@ -1,3 +1,4 @@
+close all; clear all;
 N = 600;
 lambda = linspace(0, 2*pi, N);
 for i = 1:N

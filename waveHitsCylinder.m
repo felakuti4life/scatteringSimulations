@@ -68,12 +68,12 @@ for n = 1:dur*fs
     %plot incidents
     
     mesh(X,Y, inc_map);
-    
+    hold on
     %plot scatters
     
     mesh(X,Y, scat_map);
     %imagesc(scat_map, [-50, 50]);
-    hold on
+    
     %plot a circle for cylinder reference
     plot(a*sin(-pi:0.01:pi), a*cos(-pi:0.01:pi), 'k');
     

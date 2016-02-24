@@ -16,7 +16,7 @@ function scatter_pressure = spherical_scatter( incident, k, a)
     terms = 2*M+1;
 
     for m = M'
-        l = legendre(m,incident(1)/r);
+        l = legendre(m,-incident(1)/r);
         pn(m,:)=l(1,:);
     end
     
