@@ -8,8 +8,14 @@ function [a,x,y] = mapSphereToEllipsoid(zeta, lambda, c)
     %lambda = 0.4;
     [inc_x, inc_y, inc_z] = obl2cart(zeta, lambda,0, c);
     scatter(inc_x, inc_z, 'g');
-    theta = (atan((c+inc_x)/inc_z) +  atan((c-inc_x)/inc_z))/2
-    r = zeta*0.2;
+    if inc_z > 0
+        theta = (atan((c+inc_x)/inc_z) +  atan((inc_x-c)/inc_z))/2;
+        r = zeta*sin(lambda);
+    else
+        r = zeta*sin(lambda);
+        theta = (atan((c+inc_x)/inc_z) +  atan((inc_x-c)/inc_z))/2;
+    end
+    
     xTrans = inc_x - (r*sin(theta));
     yTrans = inc_z - (r*cos(theta));
     plotTransposedCircle(r, xTrans, yTrans, N);
