@@ -3,7 +3,7 @@ close all; clear all;
 %% CONFIG
 a = 1; %sphere radius
 c = 3; %speed of sound (uniform)
-K = 256; %number of harmonics we're modelin'
+K = 32; %number of harmonics we're modelin'
 
 %Actual space
 x_dist = 3;
