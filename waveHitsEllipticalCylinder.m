@@ -1,7 +1,7 @@
 %PLANE WAVE HITTING AN ELLIPSE
 close all; clear all;
 %% CONFIG
-a = 1.6; %ellipse hyperbolic radius
+a = 0.8; %ellipse hyperbolic radius
 ep_c = 0.8; %ellipse scale factor
 c = 3; %speed of sound (uniform)
 K = 16; %number of harmonics we're modelin'
